@@ -1,4 +1,4 @@
-liste = [70, 23, 32, 24, 47, 70, 12, 42]
+liste = [12, 24, 48, 70, 23, 32, 24, 47, 70, 12, 42]
 
 def wiederholung(liste):
     wiederholung = []
@@ -66,7 +66,7 @@ def kgv(from_zahl, to_zahl, liste):
         return a * b // ggt(a,b)
     output = liste[from_zahl]
     for i in range(from_zahl+1, to_zahl+1):
-        output=kgv_formel(output, i)
+        output=kgv_formel(output, liste[i])
     print(output)
 
 wiederholung(liste)
@@ -75,4 +75,4 @@ konkatenation(liste)
 schlussel(liste)
 beziehung(liste, "x=2*y")
 domino(liste)
-kgv(1, 5, liste)
+kgv(0, 2, liste)
