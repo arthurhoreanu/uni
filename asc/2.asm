@@ -7,7 +7,7 @@ main:
 
 mov al,[m]
 add al,'0'
-Mov [m],al
+mov [m],al
 
 mov rax, 1
 mov rdi, 1
