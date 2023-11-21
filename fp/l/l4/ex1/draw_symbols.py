@@ -17,7 +17,7 @@ def draw_instructions(instr, t):
 
 def draw_str():
     sym_dict = get_symbols()
-    txt = input("Enter the symbol/word you wish to draw: \n")
+    txt = input("Das Symbol, das Sie zeichnen möchten: \n")
 
     t = turtle.Turtle()
     letter_spacing = 8 * get_pace()
@@ -32,4 +32,3 @@ def draw_str():
             draw_instructions(sym_dict[char], t)
 
     turtle.exitonclick()
-
