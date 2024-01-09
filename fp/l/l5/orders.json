@@ -1,0 +1,137 @@
+[
+    {
+        "id": 411,
+        "customer_id": 311,
+        "dishes": [
+            {
+                "id": 111,
+                "serving_size": 200,
+                "price": 5.45,
+                "preparation_time": 30
+            },
+            {
+                "id": 112,
+                "serving_size": 300,
+                "price": 10.45,
+                "preparation_time": 30
+            },
+            {
+                "id": 113,
+                "serving_size": 500,
+                "price": 20.45,
+                "preparation_time": 30
+            }
+        ],
+        "drinks": [
+            {
+                "id": 211,
+                "serving_size": 200,
+                "price": 5.45,
+                "alcohol_content": 70
+            },
+            {
+                "id": 212,
+                "serving_size": 300,
+                "price": 10.45,
+                "alcohol_content": 10
+            },
+            {
+                "id": 213,
+                "serving_size": 500,
+                "price": 20.45,
+                "alcohol_content": 5
+            }
+        ],
+        "total_cost": 72.7
+    },
+    {
+        "id": 412,
+        "customer_id": 312,
+        "dishes": [
+            {
+                "id": 111,
+                "serving_size": 200,
+                "price": 5.45,
+                "preparation_time": 30
+            },
+            {
+                "id": 112,
+                "serving_size": 300,
+                "price": 10.45,
+                "preparation_time": 30
+            },
+            {
+                "id": 113,
+                "serving_size": 500,
+                "price": 20.45,
+                "preparation_time": 30
+            }
+        ],
+        "drinks": [
+            {
+                "id": 211,
+                "serving_size": 200,
+                "price": 5.45,
+                "alcohol_content": 70
+            },
+            {
+                "id": 212,
+                "serving_size": 300,
+                "price": 10.45,
+                "alcohol_content": 10
+            },
+            {
+                "id": 213,
+                "serving_size": 500,
+                "price": 20.45,
+                "alcohol_content": 5
+            }
+        ],
+        "total_cost": 72.7
+    },
+    {
+        "id": 413,
+        "customer_id": 313,
+        "dishes": [
+            {
+                "id": 111,
+                "serving_size": 200,
+                "price": 5.45,
+                "preparation_time": 30
+            },
+            {
+                "id": 112,
+                "serving_size": 300,
+                "price": 10.45,
+                "preparation_time": 30
+            },
+            {
+                "id": 113,
+                "serving_size": 500,
+                "price": 20.45,
+                "preparation_time": 30
+            }
+        ],
+        "drinks": [
+            {
+                "id": 211,
+                "serving_size": 200,
+                "price": 5.45,
+                "alcohol_content": 70
+            },
+            {
+                "id": 212,
+                "serving_size": 300,
+                "price": 10.45,
+                "alcohol_content": 10
+            },
+            {
+                "id": 213,
+                "serving_size": 500,
+                "price": 20.45,
+                "alcohol_content": 5
+            }
+        ],
+        "total_cost": 72.7
+    }
+]

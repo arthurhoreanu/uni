@@ -1,0 +1,20 @@
+[
+    {
+        "id": 211,
+        "serving_size": 200,
+        "price": 5.45,
+        "alcohol_content": 70
+    },
+    {
+        "id": 212,
+        "serving_size": 300,
+        "price": 10.45,
+        "alcohol_content": 10
+    },
+    {
+        "id": 213,
+        "serving_size": 500,
+        "price": 20.45,
+        "alcohol_content": 5
+    }
+]

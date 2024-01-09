@@ -1,0 +1,17 @@
+[
+     {
+          "id": 501,
+          "name": "Bob",
+          "address": "Florilor 5"
+     },
+     {
+          "id": 502,
+          "name": "Tom",
+          "address": "Florilor 48"
+     },
+     {
+          "id": 503,
+          "name": "Tim",
+          "address": "Florilor 12"
+     }
+]

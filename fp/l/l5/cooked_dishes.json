@@ -1,0 +1,20 @@
+[
+    {
+        "id": 111,
+        "serving_size": 200,
+        "price": 5.45,
+        "preparation_time": 30
+    },
+    {
+        "id": 112,
+        "serving_size": 300,
+        "price": 10.45,
+        "preparation_time": 30
+    },
+    {
+        "id": 113,
+        "serving_size": 500,
+        "price": 20.45,
+        "preparation_time": 30
+    }
+]
