@@ -70,5 +70,5 @@ class Order(Identifiable):
         return "\n".join(map(lambda ordered_item: "Ordered: " + str(ordered_item.copy()), drinks_and_dishes)) \
                + total_string
 
-    def display_invoice(self):
+    def xr(self):
         print(self.__create_invoice())
