@@ -1,37 +1,30 @@
-from ADTIterator import ADTIterator
-
 class ADTBag:
 
-    def __init__(self, b=None):
-        if b is None:
-            self.b = []
-        else:
-            self.b = b
+    def __init__(self):
+        self.list = []
 
-    def add(self, e):
-        if e not in self.b:
-            self.b.append(e)
+    def add(self, elem):
+        self.list.append(elem)
 
-    def remove(self, e):
-        if e in self.b:
-            self.b.remove(e)
-
-    def search(self, e):
-        if e in self.b:
+    def remove(self, elem):
+        if elem in self.list:
+            self.list.remove(elem)
             return True
         else:
             return False
 
-    def size(self):
-        return len(self.b)
+    def length(self):
+        return len(self.list)
 
-    def nrOccurrences(self, e):
-        count = 0
-        for item in self.b:
-            if item == e:
-                count += 1
-        return count
+    def search(self, elem):
+        if elem in self.list:
+            return True
+        else:
+            return False
 
-    def iterator(self):
-        self.i = i
-        return self.i
+    def nrOccurence(self, elem):
+        nr = 0
+        for i in range(len(self.list)):
+            if self.list[i] == elem:
+                nr += 1
+        return nr
