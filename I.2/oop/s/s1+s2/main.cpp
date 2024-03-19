@@ -1,4 +1,5 @@
 #include <iostream>
+#include "BankAccount.h"
 using namespace std;
 
 void ersteAufgabe() {
@@ -32,37 +33,6 @@ struct client{
     string name, place;
 }client[10];
 
-class bankAccount {
-public:
-    bankAccount(int account_number, string name, double balance)
-            : account_number_(account_number), name_(name), balance_(balance) {}
-
-    void deposit(double amount) {
-        balance_ += amount;
-        cout << "Deposited: " << amount << ". New balance: " << balance_ << endl;
-    }
-
-    bool withdraw(double amount) {
-        if (balance_ >= amount) {
-            balance_ -= amount;
-            cout << "Withdrew: " << amount << ". New balance: " << balance_ << endl;
-            return true;
-        } else {
-            cout << "Insufficient funds" << endl;
-            return false;
-        }
-    }
-
-    double get_balance() const {
-        return balance_;
-    }
-
-private:
-    int account_number_;
-    string name_;
-    double balance_;
-};
-
 int main() {
     //ersteAufgabe();
     /*
@@ -80,9 +50,8 @@ int main() {
     cout << client[0].place;
     */
     //dritteAufgabe();
-    bankAccount my_account(12345, "John Doe", 1000.00);
-    my_account.deposit(500.00);
-    my_account.withdraw(200.00);
-    double balance = my_account.get_balance();
-    cout << "Balance: " << balance << endl;
+    BankAccount account1(123456, "John Doe", 1000.00);
+    account1.deposit(500.00);
+    account1.withdraw(200.00);
+    std::cout << "Current balance: " << account1.getBalance() << std::endl;
 }
