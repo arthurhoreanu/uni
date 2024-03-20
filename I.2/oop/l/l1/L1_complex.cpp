@@ -1,12 +1,11 @@
 #include "L1_complex.h"
 #include <cmath>
-#include <string>
-#include <sstream>
 #include <iomanip>
+#include <sstream>
 
-Complex::Complex(double real, double imag) {
+Complex::Complex(double real, double imaginary) {
     this->real = real;
-    this->imag = imag;
+    this->imaginary = imaginary;
 }
 
 double Complex::getReal() const {
@@ -14,55 +13,55 @@ double Complex::getReal() const {
 }
 
 double Complex::getImaginary() const {
-    return imag;
+    return imaginary;
 }
 
 Complex Complex::add(const Complex& other) const {
-    return Complex(real + other.real, imag + other.imag);
+    return Complex(real + other.real, imaginary + other.imaginary);
 }
 
 Complex Complex::subtract(const Complex& other) const {
-    return Complex(real - other.real, imag - other.imag);
+    return Complex(real - other.real, imaginary - other.imaginary);
 }
 
 Complex Complex::multiply(const Complex& other) const {
-    return Complex(real * other.real - imag * other.imag,
-                   real * other.imag + imag * other.real);
+    return Complex(real * other.real - imaginary * other.imaginary,
+                   real * other.imaginary + imaginary * other.real);
 }
 
 Complex Complex::divide(const Complex& other) const {
-    double denom = other.real * other.real + other.imag * other.imag;
-    return Complex((real * other.real + imag * other.imag) / denom,
-                   (imag * other.real - real * other.imag) / denom);
+    double denominator = other.real * other.real + other.imaginary * other.imaginary;
+    return Complex((real * other.real + imaginary * other.imaginary) / denominator,
+                   (imaginary * other.real - real * other.imaginary) / denominator);
 }
 
 double Complex::absolute() const {
-    double abs_value = sqrt(real * real + imag * imag);
+    double absoluteValue = sqrt(real * real + imaginary * imaginary);
     std::ostringstream oss;
-    oss << std::fixed << std::setprecision(2) << abs_value;
-    return std::stod(oss.str());  // Convert formatted string back to double
+    oss << std::fixed << std::setprecision(2) << absoluteValue;
+    return std::stod(oss.str());
+}
+
+std::string Complex::text() const {
+    std::stringstream ss;
+    ss << real;
+    if (imaginary > 0) {
+        ss << " + " << imaginary << "i";
+    } else if (imaginary < 0) {
+        ss << " " << imaginary << "i";
+    }
+    return ss.str();
 }
 
 std::string Complex::computePolar() const {
-    double abs = absolute();
+    double absoluteValue = absolute();
     std::ostringstream oss_abs;
-    oss_abs << std::fixed << std::setprecision(2) << abs;
-    double angle = atan2(imag, real) * 180.0 / M_PI;
+    oss_abs << std::fixed << std::setprecision(2) << absoluteValue;
+    double angle = atan2(imaginary, real) * 180.0 / M_PI;
     std::ostringstream oss_angle;
     oss_angle << std::fixed << std::setprecision(2) << angle;
     std::string polarString = oss_abs.str() + "(";
     polarString += "cos(" + oss_angle.str() + ")";
     polarString += " + isin(" + oss_angle.str() + "))";
     return polarString;
-}
-
-std::string Complex::text() const {
-    std::stringstream ss;
-    ss << real;
-    if (imag > 0) {
-        ss << " + " << imag << "i";
-    } else if (imag < 0) {
-        ss << " " << imag << "i";
-    }
-    return ss.str();
 }

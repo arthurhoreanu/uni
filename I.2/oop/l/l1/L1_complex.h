@@ -1,17 +1,15 @@
-#ifndef L1_COMPLEX_H
-#define L1_COMPLEX_H
-
-#include <cmath>
 #include <string>
+
+#ifndef L1__L1__COMPLEX_H
+#define L1__L1__COMPLEX_H
 
 class Complex {
 private:
     double real;
-    double imag;
-    int iterator;
+    double imaginary;
 
 public:
-    Complex(double real = 0.0, double imag = 0.0);
+    Complex(double real, double imaginary);
     double getReal() const;
     double getImaginary() const;
     Complex add(const Complex& other) const;
@@ -19,8 +17,8 @@ public:
     Complex multiply(const Complex& other) const;
     Complex divide(const Complex& other) const;
     double absolute() const;
-    std::string computePolar() const;
     std::string text() const;
+    std::string computePolar() const;
 };
 
 #endif

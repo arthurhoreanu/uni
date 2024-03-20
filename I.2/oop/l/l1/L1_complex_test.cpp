@@ -1,23 +1,23 @@
-#include <iostream>
+#include "L1_complex.h"
 #include <cassert>
 #include <vector>
-#include "L1_complex.h"
+#include <iostream>
 
 int main() {
-    Complex z1(1, 2);
-    Complex z2(3, 4);
-    Complex sum = z1.add(z2);
-    Complex diff = z1.subtract(z2);
-    Complex prod = z1.multiply(z2);
-    Complex division = z1.divide(z2);
-    assert(sum.text()=="4 + 6i");
-    assert(diff.text()=="-2 -2i");
-    assert(prod.text()=="-5 + 10i");
-    assert(division.text()=="0.44 + 0.08i");
-    assert(z1.absolute()==2.24);
-    std::string polarString = z1.computePolar();
-    assert(polarString=="2.24(cos(63.43) + isin(63.43))");
-    assert(z1.text()=="1 + 2i");
+    Complex c1(1, 2);
+    Complex c2(3, 4);
+    Complex sum = c1.add(c2);
+    Complex difference = c1.subtract(c2);
+    Complex product = c1.multiply(c2);
+    Complex division = c1.divide(c2);
+
+    assert(sum.getReal() == 4 && sum.getImaginary() == 6);
+    assert(difference.getReal() == -2 && difference.getImaginary() == -2);
+    assert(product.getReal() == -5 && product.getImaginary() == 10);
+    assert(division.getReal() == 0.44 && division.getImaginary() == 0.08);
+    assert(c1.absolute()==2.24);
+    assert(c1.text()=="1 + 2i");
+    assert(c1.computePolar()=="2.24(cos(63.43) + isin(63.43))");
 
     std::vector<Complex> complexList;
     complexList.push_back(Complex(1, 2));
@@ -26,6 +26,7 @@ int main() {
     Complex sumList(0, 0);
     for (int iterator = 0; iterator < complexList.size(); iterator++){
         sumList = sumList.add(complexList[iterator]);
-    };
-    std::cout << sumList.text();
+    }
+    std::cout << sumList.getReal() << " + " << sumList.getImaginary() << "i";
+    return 0;
 }
