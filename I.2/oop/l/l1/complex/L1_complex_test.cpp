@@ -11,7 +11,7 @@ int main() {
     Complex product = c1.multiply(c2);
     Complex division = c1.divide(c2);
 
-    assert(sum.getReal() == 4 && sum.getImaginary() == 6);
+    assert(sum.getReal()==4 && sum.getImaginary()==6);
     assert(difference.getReal() == -2 && difference.getImaginary() == -2);
     assert(product.getReal() == -5 && product.getImaginary() == 10);
     assert(division.getReal() == 0.44 && division.getImaginary() == 0.08);
