@@ -38,7 +38,7 @@ Complex Complex::divide(const Complex& other) const {
 double Complex::absolute() const {
     double absoluteValue = sqrt(real * real + imaginary * imaginary);
     std::ostringstream oss;
-    oss << std::fixed << std::setprecision(2) << absoluteValue;
+    oss << std::fixed << std::setprecision(2) << absoluteValue; // set precision at 2 decimals
     return std::stod(oss.str());
 }
 
@@ -56,12 +56,12 @@ std::string Complex::text() const {
 std::string Complex::computePolar() const {
     double absoluteValue = absolute();
     std::ostringstream oss_abs;
-    oss_abs << std::fixed << std::setprecision(2) << absoluteValue;
-    double angle = atan2(imaginary, real) * 180.0 / M_PI;
+    oss_abs << std::fixed << std::setprecision(2) << absoluteValue;  // set precision at 2 decimals
+    double angle = atan2(imaginary, real) * 180.0 / M_PI; // calculate theta
     std::ostringstream oss_angle;
-    oss_angle << std::fixed << std::setprecision(2) << angle;
+    oss_angle << std::fixed << std::setprecision(2) << angle;  // set precision at 2 decimals
     std::string polarString = oss_abs.str() + "(";
     polarString += "cos(" + oss_angle.str() + ")";
     polarString += " + isin(" + oss_angle.str() + "))";
-    return polarString;
+    return polarString; // formatted as absolute(cos(theta) + isin(theta)
 }

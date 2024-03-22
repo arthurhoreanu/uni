@@ -14,7 +14,6 @@ public:
     Rational substract(const Rational& other) const;
     Rational multiply(const Rational& other) const;
     Rational divide(const Rational& other) const;
-
     Rational reduce();
     Rational inverse() const;
     int compare(const Rational& other) const;

@@ -22,8 +22,8 @@ int main() {
     assert(inversion.getNumerator()==10 && inversion.getDenominator()==7);
     assert(fractionThree.compare(fractionFour)==0);
 
-    std::vector<Rational> rationalList;
-    rationalList.push_back(Rational(7, 3));
+    std::vector<Rational> rationalList;  // an empty vector of rational numbers
+    rationalList.push_back(Rational(7, 3)); // add at the end of the vector
     rationalList.push_back(Rational(2, 5));
     rationalList.push_back(Rational(1, 4));
     Rational sumList(0, 1);

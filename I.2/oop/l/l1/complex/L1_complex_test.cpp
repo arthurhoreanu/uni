@@ -19,11 +19,11 @@ int main() {
     assert(c1.text()=="1 + 2i");
     assert(c1.computePolar()=="2.24(cos(63.43) + isin(63.43))");
 
-    std::vector<Complex> complexList;
-    complexList.push_back(Complex(1, 2));
+    std::vector<Complex> complexList; // an empty vector of complex numbers
+    complexList.push_back(Complex(1, 2)); // add at the end of the vector
     complexList.push_back(Complex(3, 4));
     complexList.push_back(Complex(-1, 5));
-    Complex sumList(0, 0);
+    Complex sumList(0, 0); // initialize an empty complex sum
     for (int iterator = 0; iterator < complexList.size(); iterator++){
         sumList = sumList.add(complexList[iterator]);
     }

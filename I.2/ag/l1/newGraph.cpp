@@ -33,7 +33,6 @@ void newGraph::printNewAdjList() {
     cout << "]";
 }
 
-
 int newGraph::calculateNewMinDegree() {
     minDegree = INT_MAX;
     for (int i = 0; i < n; i++) {
