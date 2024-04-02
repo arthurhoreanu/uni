@@ -1,5 +1,7 @@
 #include "SortedBag.h"
 #include "SortedBagIterator.h"
+#include <iostream>
+#include <vector>
 
 // SortedBag constructor
 // Time complexity: Theta(1) for all cases
@@ -46,48 +48,34 @@ void SortedBag::add(TComp e) {
     elements[position] = e;
 }
 
-// SortedBag binarySearch method
-// Time complexity: Theta(log n) for all cases
-int SortedBag::binarySearch(TComp e) const {
-    int left = 0, right = numberOfElements - 1;
-    while(left <= right) {
-        int mid = (left + right) / 2;
-        if(elements[mid] == e) {
-            return mid;
-        } else if(relation(elements[mid], e)) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return -1;
-}
-
 // SortedBag remove method
 // Time complexity: Theta(n) for worst case
-// Theta(log n) for best and average case
+// Theta(1) for best and average case
 bool SortedBag::remove(TComp e) {
-    int position = binarySearch(e);
-    if(position == -1) {
-        return false;
+    int i = 0;
+    while (i < numberOfElements && elements[i] != e) {
+        ++i;
     }
-    for(int i = position + 1; i < numberOfElements; i++) {
-        elements[i - 1] = elements[i];
+    if (i < numberOfElements) {
+        for (int j = i; j < numberOfElements - 1; ++j) {
+            elements[j] = elements[j + 1];
+        }
+        --numberOfElements;
+        return true;
     }
-    numberOfElements--;
-    autoResize();
-    return true;
+    return false;
 }
 
 // SortedBag search method
-// Time complexity: Theta(log n) for worst case
-// Theta(1) for best and average case
+// Time complexity: Theta(n) for worst and average case
+// Theta(1) best case
 bool SortedBag::search(TComp e) const {
-    if(isEmpty()) {
-        return false;
+    for (int i = 0; i < numberOfElements; ++i) {
+        if (elements[i] == e) {
+            return true;
+        }
     }
-    int pos = binarySearch(e);
-    return pos != -1;
+    return false;
 }
 
 // SortedBag nrOccurrences method
@@ -115,6 +103,32 @@ bool SortedBag::isEmpty() const {
 SortedBagIterator SortedBag::iterator() const {
     return SortedBagIterator(*this);
 }
+
+/*
+// Time complexity: O(n^2) worst case
+// Theta(1) best and average case
+int SortedBag::removeMaxFrequency() {
+    if (numberOfElements == 0) {
+        return false;
+    }
+    int maxElement = 1000;
+    std::vector<int> frequency(maxElement, 0);
+    int maxFrequency = 0;
+    for (int i = 0; i < numberOfElements; i++) {
+        frequency[elements[i]]++;
+        if (frequency[elements[i]] > maxFrequency) {
+            maxFrequency = frequency[elements[i]];
+        }
+    }
+    std::vector<int> result;
+    for (int i = 0; i < numberOfElements; i++) {
+        if (frequency[elements[i]] != maxFrequency) {
+            result.push_back(elements[i]);
+        }
+    }
+    return true;
+}
+ */
 
 SortedBag::~SortedBag() {
     delete[] elements;

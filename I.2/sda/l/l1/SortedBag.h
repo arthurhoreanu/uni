@@ -1,6 +1,8 @@
 #pragma once
 //DO NOT INCLUDE SORTEDBAGITERATOR
 
+#include <iostream>
+
 //DO NOT CHANGE THIS PART
 typedef int TComp;
 typedef TComp TElem;
@@ -31,10 +33,6 @@ public:
     //adds an element to the sorted bag
     void add(TComp e);
 
-    //performs binarySearch on the bag
-    //returns the position of the element
-    int binarySearch(TComp e) const;
-
     //removes one occurence of an element from a sorted bag
     //returns true if an eleent was removed, false otherwise (if e was not part of the sorted bag)
     bool remove(TComp e);
@@ -53,6 +51,8 @@ public:
 
     //checks if the sorted bag is empty
     bool isEmpty() const;
+
+    //int SortedBag::removeMaxFrequency() {
 
     //destructor
     ~SortedBag();

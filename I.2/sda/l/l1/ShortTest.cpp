@@ -35,5 +35,6 @@ void testAll() {
     it.first();
     assert(it.valid() == true);
 
-}
+    //assert(removeMaxFrequency()==true);
 
+}

@@ -9,6 +9,5 @@ using namespace std;
 int main() {
     testAll();
     testAllExtended();
-
     cout << "Test over" << endl;
 }
