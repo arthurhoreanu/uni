@@ -1,3 +1,0 @@
-/Users/r2/Documents/uni/I.2/sda/l/l4/cmake-build-debug/CMakeFiles/l4.dir
-/Users/r2/Documents/uni/I.2/sda/l/l4/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/r2/Documents/uni/I.2/sda/l/l4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
