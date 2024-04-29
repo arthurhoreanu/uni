@@ -1,5 +1,14 @@
+.DS_Store
+/.DS_Store/
+*/.DS_Store/
+**/.DS_Store/
+
+
 /.idea/
+*/.idea/
+**/.idea/
 .idea/vcs.xml
+
 /.git/
 /.vs/
 /cmake-build-debug/
