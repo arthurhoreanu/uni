@@ -1,12 +1,13 @@
 .DS_Store
-/.DS_Store/
-*/.DS_Store/
-**/.DS_Store/
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
 
+.idea
+._.idea
+**/.idea
+**/._.idea
 
-/.idea/
-*/.idea/
-**/.idea/
 .idea/vcs.xml
 
 /.git/
