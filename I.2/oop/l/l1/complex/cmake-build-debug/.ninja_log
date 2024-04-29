@@ -1,0 +1,9 @@
+# ninja log v5
+0	472	1710919365088861042	CMakeFiles/complex.dir/L1_complex.cpp.o	9586c2d97fa01c78
+0	486	1710919365102845555	CMakeFiles/complex.dir/L1_complex_test.cpp.o	8b6c07ae9bbeac0c
+486	530	1710919365147725114	complex	c090e5251692d307
+4	388	1710921739039687999	CMakeFiles/complex.dir/L1_complex_test.cpp.o	8b6c07ae9bbeac0c
+389	427	1710921739080793366	complex	c090e5251692d307
+5	807	1710952055590408353	CMakeFiles/complex.dir/L1_complex.cpp.o	9586c2d97fa01c78
+5	809	1710952055594036546	CMakeFiles/complex.dir/L1_complex_test.cpp.o	8b6c07ae9bbeac0c
+809	997	1710952055781767422	complex	c090e5251692d307
