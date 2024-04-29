@@ -1,0 +1,5 @@
+reverseMap(map)
+
+explicație: inversează complet map-ul
+pre: head, care va fi map-ul deja creat
+post: head, map-ul inversat

@@ -3,11 +3,10 @@
 #include "Map.h"
 #include "MapIterator.h"
 
-
-void testAll() { //call each function to see if it is implemented
+void testAll() {
     Map m;
     assert(m.isEmpty() == true);
-    assert(m.size() == 0); //add elements
+    assert(m.size() == 0);
     assert(m.add(5,5)==NULL_TVALUE);
     assert(m.add(1,111)==NULL_TVALUE);
     assert(m.add(10,110)==NULL_TVALUE);
@@ -22,13 +21,11 @@ void testAll() { //call each function to see if it is implemented
     assert(m.remove(6) == NULL_TVALUE);
     assert(m.size() == 4);
 
-
-    TElem e;
     MapIterator id = m.iterator();
     id.first();
     int s1 = 0, s2 = 0;
     while (id.valid()) {
-        e = id.getCurrent();
+        TElem e = id.getCurrent();
         s1 += e.first;
         s2 += e.second;
         id.next();
@@ -36,6 +33,10 @@ void testAll() { //call each function to see if it is implemented
     assert(s1 == 19);
     assert(s2 == 19);
 
+    m.reverseMap();
+    assert(m.size()==4);
+    MapIterator itTwo = m.iterator();
+    TElem el = itTwo.getCurrent();
+    assert(el.first == -3);
+    assert(el.second == -3);
 }
-
-

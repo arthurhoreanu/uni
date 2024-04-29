@@ -20,6 +20,6 @@ bool isRegistered(Vehicle vehicle){
 
 int main() {
     Vehicle myCar;
-    std::cout << isRegistered(myCar);
+   std::cout << isRegistered(myCar);
     return 0;
 }

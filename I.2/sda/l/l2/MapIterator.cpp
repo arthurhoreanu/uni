@@ -3,33 +3,41 @@
 #include <exception>
 using namespace std;
 
-
+// Time complexity: Theta(1) for all cases
 MapIterator::MapIterator(const Map& d) : map(d)
 {
-    //TODO - Implementation
+    current = map.head;
 }
 
-
+// Time complexity: Theta(1) for all cases
 void MapIterator::first() {
-    //TODO - Implementation
+    current = map.head;
 }
 
-
+// Time complexity: Theta(1) for all cases
 void MapIterator::next() {
-    //TODO - Implementation
+    if(!valid())
+        throw exception();
+    else if (current != nullptr) {
+        current = current->next;
+    }
 }
 
-
+// Time complexity: Theta(1) for all cases
 TElem MapIterator::getCurrent(){
-    //TODO - Implementation
-    return NULL_TELEM;
+    if(!valid())
+        throw exception();
+    else if (current == nullptr) {
+        return NULL_TELEM;
+    }
+    // Return a pair key/value from current key
+    return TElem(current->key, current->value);
 }
 
-
+// Time complexity: Theta(1) for all cases
 bool MapIterator::valid() const {
-    //TODO - Implementation
-    return false;
+    if(current!=nullptr)
+        return true;
+    else
+        return false;
 }
-
-
-

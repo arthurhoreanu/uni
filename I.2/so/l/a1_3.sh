@@ -13,3 +13,8 @@ echo
 ls -lt "$dir_path"
 echo
 ls -lS "$dir_path"
+#!/bin/bash
+#!/bin/bash
+#!/bin/bash
+#!/bin/bash
+#!/bin/bash

@@ -1,0 +1,13 @@
+void Map::reverseMap
+    Node* prevoius -> empty;
+    Node* current -> head (map-ul deja creat);
+     Node* next -> empty;
+
+     cât timp current != empty (map-ul nu e gol)
+        next -> current->next (toate elementele din map, mai puțin primul)
+        current->next = previous (primul element din map)
+        previous -> current (preia ce e acum în current, elementul nou va fi mereu pe prima poziție)
+        current -> next (toate elementele de mai departe)
+     sfârșit cât timp
+
+     head -> previoxus (in previous se vor salva elementele din map în ordine inversa)

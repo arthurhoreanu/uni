@@ -4,7 +4,6 @@
 
 #include <assert.h>
 #include <iostream>
-
 using namespace std;
 
 void testIteratorSteps(Map& m) {
@@ -47,7 +46,6 @@ void testCreate() {
         assert(true);
     }
 }
-
 
 void testAdd() {
     cout << "Test add" << endl;
@@ -93,7 +91,6 @@ void testAdd() {
     testIteratorSteps(m);
     assert(m.size() == 20000);
 }
-
 
 void testRemove() {
     cout << "Test remove" << endl;
@@ -153,10 +150,7 @@ void testRemove() {
         }
     }
     assert(m.size() == 0);
-
 }
-
-
 
 void testIterator() {
     cout << "Test iterator" << endl;
@@ -222,10 +216,7 @@ void testIterator() {
         count++;
     }
     assert(count == 50);
-
 }
-
-
 
 void testQuantity() {
     Map m;
