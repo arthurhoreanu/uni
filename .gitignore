@@ -12,7 +12,12 @@
 
 /.git/
 /.vs/
+
+cmake-build-debug/
 /cmake-build-debug/
+*/cmake-build-debug
+*/cmake-build-debug/
+
 CMakeLists.txt
 *.iml
 
