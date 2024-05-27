@@ -1,0 +1,3 @@
+/Users/r2/Documents/uni/I.2/oop/s/s5/cmake-build-debug/CMakeFiles/s5.dir
+/Users/r2/Documents/uni/I.2/oop/s/s5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/r2/Documents/uni/I.2/oop/s/s5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

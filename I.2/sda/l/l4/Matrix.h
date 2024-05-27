@@ -7,21 +7,19 @@ typedef int TElem;
 class Matrix {
 
 private:
-    typedef int (*TFunction)(int row, int col);
-
+    int lines, columns;
     struct Node{
-        int row, col;
+        int line, column;
         TElem value;
         Node* next;
     };
-
     struct hashTable{
         Node** T;
-        int m;
-        TFunction h;
+        int m, size;
     };
-
-    int rows, columns;
+    hashTable table;
+    int hashFunction(int line, int column) const;
+    void resize();
 
 public:
     //constructor
@@ -44,5 +42,4 @@ public:
 
     // destructor
     ~Matrix();
-
 };

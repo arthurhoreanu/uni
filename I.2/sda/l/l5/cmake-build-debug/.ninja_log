@@ -1,0 +1,5 @@
+# ninja log v5
+1	550	1716746510825200253	CMakeFiles/l5.dir/SMMIterator.cpp.o	e19ea106aca9a9e5
+4	299	1716746587690953244	CMakeFiles/l5.dir/ShortTest.cpp.o	bdaa46db307cf975
+4	391	1716746570689194161	CMakeFiles/l5.dir/ExtendedTest.cpp.o	9ff07d5fb9791e2f
+0	604	1716746510881786648	CMakeFiles/l5.dir/App.cpp.o	47222034ce7c7005
