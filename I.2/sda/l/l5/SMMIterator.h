@@ -12,7 +12,7 @@ private:
 
     //TODO - Representation
     int current;
-    Node** stack;
+    int* stack;
     int stackLength;
     int stackCapacity;
 
@@ -21,5 +21,8 @@ public:
     void next();
     bool valid() const;
     TElem getCurrent() const;
+    int pop();
+    void push(int nodeIndex);
+    bool previous();
 };
 

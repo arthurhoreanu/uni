@@ -40,6 +40,9 @@ public:
     //throws exception if (i,j) is not a valid position in the Matrix
     TElem modify(int i, int j, TElem e);
 
+    void newDimension(int newLines, int newColumns);
+    void printMatrix();
+
     // destructor
     ~Matrix();
 };
