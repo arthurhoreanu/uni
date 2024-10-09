@@ -1,55 +1,60 @@
+### IntelliJ ###
+out/
+*/out/
+**/out/
+
+### Mac OS ###
 .DS_Store
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
 
+### PyCharm ###
 .idea
 ._.idea
 **/.idea
 **/._.idea
-
 .idea/vcs.xml
 
-/.git/
-/.vs/
-
+### CLion ###
 cmake-build-debug/
 /cmake-build-debug/
 */cmake-build-debug
 */cmake-build-debug/
-
 CMakeLists.txt
+
+### Prerequisites ###
+*.d
+/.git/
+/.vs/
 *.iml
 
-# Prerequisites
-*.d
-
-# Compiled Object files
+### Compiled Object files ###
 *.slo
 *.lo
 *.o
 *.obj
 
-# Precompiled Headers
+### Precompiled Headers ###
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
+### Compiled Dynamic libraries ###
 *.so
 *.dylib
 *.dll
 
-# Fortran module files
+### Fortran module files ###
 *.mod
 *.smod
 
-# Compiled Static libraries
+### Compiled Static libraries ###
 *.lai
 *.la
 *.a
 *.lib
 
-# Executables
+### Executables ###
 *.exe
 *.out
 *.app
