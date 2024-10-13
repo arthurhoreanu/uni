@@ -1,4 +1,4 @@
-import java.util.Arrays; // Needed for the Array toString conversion.
+import java.util.Arrays; // Needed for the Array toString conversion
 
 public class Aufgabe1 {
     public static void main(String[] args) {
