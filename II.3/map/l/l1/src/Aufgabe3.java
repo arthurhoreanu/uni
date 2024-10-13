@@ -11,10 +11,10 @@ public class Aufgabe3 {
         int[] fifthNumber = {2, 3, 6, 0, 0, 0, 0, 0, 0};
 
         System.out.println("Aufgabe 3:");
-        System.out.println("130000000 + 870000000 = " + Arrays.toString(aufgabe3.add(firstNumber, secondNumber)));
-        System.out.println("830000000 - 540000000 " + Arrays.toString(aufgabe3.subtract(thirdNumber, fourthNumber)));
-        System.out.println("236000000 * 2 = " + Arrays.toString(aufgabe3.multiply(fifthNumber, 2)));
-        System.out.println("236000000 / 2 = " + Arrays.toString(aufgabe3.divide(fifthNumber, 2)));
+        System.out.println("[1, 3, 0, 0, 0, 0, 0, 0, 0] + [8, 7, 0, 0, 0, 0, 0, 0, 0] = " + Arrays.toString(aufgabe3.add(firstNumber, secondNumber)));
+        System.out.println("[8, 3, 0, 0, 0, 0, 0, 0, 0] - [5, 4, 0, 0, 0, 0, 0, 0, 0] = " + Arrays.toString(aufgabe3.subtract(thirdNumber, fourthNumber)));
+        System.out.println("[2, 3, 6, 0, 0, 0, 0, 0, 0] * 2 = " + Arrays.toString(aufgabe3.multiply(fifthNumber, 2)));
+        System.out.println("[2, 3, 6, 0, 0, 0, 0, 0, 0] / 2 = " + Arrays.toString(aufgabe3.divide(fifthNumber, 2)));
         System.out.println("");
     }
 

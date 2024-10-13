@@ -9,6 +9,7 @@ public class Aufgabe1 {
         int[] roundedArray = aufgabe1.rounded(array);
 
         System.out.println("Aufgabe 1:");
+        System.out.println("Array: [29, 37, 38, 41, 84, 67]");
         System.out.println("1. Grades with insufficient score: " + Arrays.toString(insufficientScoreArray));
         System.out.println("2. Average of the grades: " + aufgabe1.average(array));
         System.out.println("3. Rounded grades: " + Arrays.toString(roundedArray));
