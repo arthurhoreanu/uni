@@ -1,6 +1,7 @@
 import java.util.Arrays; // Needed for the Array toString conversion
 
 public class Aufgabe3 {
+
     public static void main(String[] args) {
         Aufgabe3 aufgabe3 = new Aufgabe3();
         int[] firstNumber = {1, 3, 0, 0, 0, 0, 0, 0, 0};
@@ -9,10 +10,12 @@ public class Aufgabe3 {
         int[] fourthNumber = {5, 4, 0, 0, 0, 0, 0, 0, 0};
         int[] fifthNumber = {2, 3, 6, 0, 0, 0, 0, 0, 0};
 
+        System.out.println("Aufgabe 3:");
         System.out.println("130000000 + 870000000 = " + Arrays.toString(aufgabe3.add(firstNumber, secondNumber)));
         System.out.println("830000000 - 540000000 " + Arrays.toString(aufgabe3.subtract(thirdNumber, fourthNumber)));
         System.out.println("236000000 * 2 = " + Arrays.toString(aufgabe3.multiply(fifthNumber, 2)));
         System.out.println("236000000 / 2 = " + Arrays.toString(aufgabe3.divide(fifthNumber, 2)));
+        System.out.println("");
     }
 
         public int[] add(int[] addendOne, int[] addendTwo){

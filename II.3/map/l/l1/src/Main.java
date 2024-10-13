@@ -5,5 +5,6 @@ public class Main {
         Aufgabe1.main(args);
         Aufgabe2.main(args);
         Aufgabe3.main(args);
+        Aufgabe4.main(args);
     }
 }

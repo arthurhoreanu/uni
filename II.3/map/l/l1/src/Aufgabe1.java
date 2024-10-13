@@ -1,6 +1,7 @@
 import java.util.Arrays; // Needed for the Array toString conversion
 
 public class Aufgabe1 {
+
     public static void main(String[] args) {
         Aufgabe1 aufgabe1 = new Aufgabe1();
         int[] array = {29, 37, 38, 41, 84, 67};

@@ -1,4 +1,5 @@
 public class Aufgabe2 {
+
     int n;
     int[] array;
 
