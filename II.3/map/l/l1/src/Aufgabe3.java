@@ -91,18 +91,16 @@ public class Aufgabe3 {
             nonZeroIndex++;
         }
 
-        // Finding the last non-zero index
-        int end = result.length - 1;
-        while (end >= nonZeroIndex && result[end] == 0) {
-            end--;
-        }
-
         // If all elements are zero, return [0]
-        if (nonZeroIndex > end) {
+        if (nonZeroIndex == result.length) {
             return new int[]{0};
         }
 
-        // Copying the non-zero range from start to end
-        return Arrays.copyOfRange(result, nonZeroIndex, end + 1);
+        int[] perfectedResult = new int[result.length - nonZeroIndex];
+        for (int i = 0; i < perfectedResult.length; i++) {
+            perfectedResult[i] = result[nonZeroIndex + i];
+        }
+
+        return perfectedResult;
     }
 }

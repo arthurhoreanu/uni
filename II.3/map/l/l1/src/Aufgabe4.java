@@ -10,12 +10,11 @@ public class Aufgabe4 {
         int[] keyboardsFour = {60};
         int[] keyboardsFive = {40, 60};
 
-
         System.out.println("Aufgabe 4:");
         System.out.println("Cheapest keyboard: " + aufgabe4.cheapest(keyboards));
         System.out.println("Most expensive keyboard: " + aufgabe4.mostExpensive(keyboardsTwo));
         System.out.println("Most expensive USB: " + aufgabe4.mostExpensive(usbs));
-        System.out.println("Most expensive within budget: " + aufgabe4.mostExpensiveWithinBudget(usbsTwo, 30));
+        System.out.println("Budget: 30, Most expensive within budget: " + aufgabe4.mostExpensiveWithinBudget(usbsTwo, 30));
         System.out.println("Budget: 60, Markus spends: " +aufgabe4.withinBudget(keyboardsThree, usbsThree, 60));
         System.out.println("Budget: 60, Markus spends: " +aufgabe4.withinBudget(keyboardsFour, usbsThree, 60));
         System.out.println("Budget: 60, Markus spends: " +aufgabe4.withinBudget(keyboardsFive, usbsThree, 60));
