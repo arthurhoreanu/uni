@@ -11,6 +11,7 @@ public class Aufgabe2 {
     public static void main(String[] args) {
         Aufgabe2 aufgabe2 = new Aufgabe2(5, new int[]{4, 8, 3, 10, 17});
         System.out.println("Maximum number: " + aufgabe2.maximumNumber());
+        System.out.println("Minimum number: " + aufgabe2.minimumNumber());
     }
 
     public int maximumNumber() {
@@ -19,5 +20,13 @@ public class Aufgabe2 {
             if (number > max)
                 max = number;
         return max;
+    }
+
+    public int minimumNumber() {
+        int min = Integer.MAX_VALUE;
+        for (int number : array)
+            if (number < min)
+                min = number;
+        return min;
     }
 }
