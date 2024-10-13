@@ -7,10 +7,12 @@ public class Aufgabe1 {
         int[] insufficientScoreArray = aufgabe1.insufficientScore(array);
         int[] roundedArray = aufgabe1.rounded(array);
 
+        System.out.println("Aufgabe 1:");
         System.out.println("1. Grades with insufficient score: " + Arrays.toString(insufficientScoreArray));
         System.out.println("2. Average of the grades: " + aufgabe1.average(array));
         System.out.println("3. Rounded grades: " + Arrays.toString(roundedArray));
         System.out.println("4. Maximum rounded grade: " + aufgabe1.maxRounded(array));
+        System.out.println("");
     }
 
     public int[] insufficientScore(int[] gradesArray) {
