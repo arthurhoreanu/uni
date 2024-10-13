@@ -7,6 +7,7 @@ public class Aufgabe1 {
         int[] insufficientScoreArray = aufgabe1.insufficientScore(array);
 
         System.out.println("1. Grades with insufficient score: " + Arrays.toString(insufficientScoreArray));
+        System.out.println("2. Average of the grades: " + aufgabe1.average(array));
     }
 
     public int[] insufficientScore(int[] gradesArray) {
@@ -24,5 +25,13 @@ public class Aufgabe1 {
             }
         }
         return result;
+    }
+
+    public double average(int[] gradesArray) {
+        double sum = 0;
+        for (int i = 0; i < gradesArray.length; i++)
+            sum += gradesArray[i];
+        double average = sum / gradesArray.length;
+        return Math.round(average * 100.0) / 100.0;
     }
 }
