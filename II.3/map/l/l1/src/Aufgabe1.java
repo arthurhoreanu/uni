@@ -5,9 +5,11 @@ public class Aufgabe1 {
         Aufgabe1 aufgabe1 = new Aufgabe1();
         int[] array = {29, 37, 38, 41, 84, 67};
         int[] insufficientScoreArray = aufgabe1.insufficientScore(array);
+        int[] roundedArray = aufgabe1.rounded(array);
 
         System.out.println("1. Grades with insufficient score: " + Arrays.toString(insufficientScoreArray));
         System.out.println("2. Average of the grades: " + aufgabe1.average(array));
+        System.out.println("3. Rounded grades: " + Arrays.toString(roundedArray));
     }
 
     public int[] insufficientScore(int[] gradesArray) {
@@ -33,5 +35,19 @@ public class Aufgabe1 {
             sum += gradesArray[i];
         double average = sum / gradesArray.length;
         return Math.round(average * 100.0) / 100.0;
+    }
+
+    public int[] rounded(int[] gradesArray) {
+        int[] result = new int[gradesArray.length];
+        int i=0;
+        for(int grade : gradesArray){
+            if (grade >= 38) {
+                int nextFiveMultiple = ((grade / 5) + 1) * 5;
+                if (nextFiveMultiple - grade < 3)
+                    grade = nextFiveMultiple;
+            }
+            result[i++] = grade;
+        }
+        return result;
     }
 }
