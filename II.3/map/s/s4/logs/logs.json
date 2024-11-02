@@ -1,0 +1,45 @@
+[
+  {
+    "timestamp": "2014-07-02T20:52:39",
+    "severity": "DEBUG",
+    "message": {
+      "file": "HelloExample:19",
+      "text": "This is debug : mkyong"
+    },
+    "visibility": ["low", "high"]
+  },
+  {
+    "timestamp": "2014-07-02T20:52:39",
+    "severity": "INFO",
+    "message": {
+      "file": "HelloExample:23",
+      "text": "This is info : mkyong"
+    },
+    "visibility": ["low"]
+  },
+  {
+    "timestamp": "2014-07-02T20:52:39",
+    "severity": "FATAL",
+    "message": {
+      "text": "This is fatal : mkyong"
+    },
+    "visibility": ["low", "medium"]
+  },
+  {
+    "timestamp": "2014-07-02T20:52:39",
+    "severity": "ERROR",
+    "message": {
+      "text": "This is error : mkyong"
+    },
+    "visibility": ["low"]
+  },
+  {
+    "timestamp": "2014-07-02T20:52:39",
+    "severity": "WARN",
+    "message": {
+      "file": "HelloExample:26",
+      "text": "This is warn : mkyong"
+    },
+    "visibility": ["high"]
+  }
+]

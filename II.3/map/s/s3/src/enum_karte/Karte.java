@@ -1,10 +1,10 @@
-package karte;
+package enum_karte;
 
 public class Karte {
-    private final String farbe;
-    private final int wert;
+    private final Farbe farbe;
+    private final Wert wert;
 
-    public Karte(String farbe, int wert){
+    public Karte(Farbe farbe, Wert wert){
         this.farbe = farbe;
         this.wert = wert;
     }
@@ -12,7 +12,7 @@ public class Karte {
     @Override
     public String toString() {
         return "Karte{" +
-                "farbe='" + farbe + '\'' +
+                "farbe=" + farbe +
                 ", wert=" + wert +
                 '}';
     }

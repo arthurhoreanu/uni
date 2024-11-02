@@ -1,0 +1,6 @@
+timestamp,severity,message_file,message_text,visibility
+"2014-07-02T20:52:39","DEBUG","HelloExample:19","This is debug : mkyong","low; high"
+"2014-07-02T20:52:39","INFO","HelloExample:23","This is info : mkyong","low"
+"2014-07-02T20:52:39","FATAL","","This is fatal : mkyong","low; medium"
+"2014-07-02T20:52:39","ERROR","","This is error : mkyong","low"
+"2014-07-02T20:52:39","WARN","HelloExample:26","This is warn : mkyong","high"

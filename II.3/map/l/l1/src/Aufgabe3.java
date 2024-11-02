@@ -13,7 +13,7 @@ public class Aufgabe3 {
         System.out.println("Aufgabe 3:");
         System.out.println("1. [1, 3, 0, 0, 0, 0, 0, 0, 0] + [8, 7, 0, 0, 0, 0, 0, 0, 0] = " + Arrays.toString(aufgabe3.add(firstNumber, secondNumber)));
         System.out.println("2. [8, 3, 0, 0, 0, 0, 0, 0, 0] - [5, 4, 0, 0, 0, 0, 0, 0, 0] = " + Arrays.toString(aufgabe3.subtract(thirdNumber, fourthNumber)));
-        System.out.println("3. [2, 3, 6, 0, 0, 0, 0, 0, 0] * 2 = " + Arrays.toString(aufgabe3.multiply(fifthNumber, 2)));
+        System.out.println("3. [2, 3, 6, 0, 0, 0, 0, 0, 0] * 1 = " + Arrays.toString(aufgabe3.multiply(fifthNumber, 1)));
         System.out.println("4. [2, 3, 6, 0, 0, 0, 0, 0, 0] / 2 = " + Arrays.toString(aufgabe3.divide(fifthNumber, 2)));
         System.out.println("");
     }

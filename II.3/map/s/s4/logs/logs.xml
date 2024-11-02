@@ -1,0 +1,57 @@
+<logs>
+    <log>
+        <timestamp>2014-07-02T20:52:39</timestamp>
+        <severity>DEBUG</severity>
+        <message>
+            <file>HelloExample:19</file>
+            <text>This is debug : mkyong</text>
+        </message>
+        <visibility>
+            <level>low</level>
+            <level>high</level>
+        </visibility>
+    </log>
+    <log>
+        <timestamp>2014-07-02T20:52:39</timestamp>
+        <severity>INFO</severity>
+        <message>
+            <file>HelloExample:23</file>
+            <text>This is info : mkyong</text>
+        </message>
+        <visibility>
+            <level>low</level>
+        </visibility>
+    </log>
+    <log>
+        <timestamp>2014-07-02T20:52:39</timestamp>
+        <severity>FATAL</severity>
+        <message>
+            <text>This is fatal : mkyong</text>
+        </message>
+        <visibility>
+            <level>low</level>
+            <level>medium</level>
+        </visibility>
+    </log>
+    <log>
+        <timestamp>2014-07-02T20:52:39</timestamp>
+        <severity>ERROR</severity>
+        <message>
+            <text>This is error : mkyong</text>
+        </message>
+        <visibility>
+            <level>low</level>
+        </visibility>
+    </log>
+    <log>
+        <timestamp>2014-07-02T20:52:39</timestamp>
+        <severity>WARN</severity>
+        <message>
+            <file>HelloExample:26</file>
+            <text>This is warn : mkyong</text>
+        </message>
+        <visibility>
+            <level>high</level>
+        </visibility>
+    </log>
+</logs>
