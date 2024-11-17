@@ -1,51 +1,58 @@
 <?php
 
 $s = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-$c = socket_connect($s, "INSERT_IP", INSERT_PORT);
+$c = socket_connect($s, "localhost", 12345);
 
 if ($c === false) {
-    die("Eroare la conectare: " . socket_strerror(socket_last_error()));
+    die("Connection error: " . socket_strerror(socket_last_error()));
 }
 
-echo "Bun venit la Wordle!\n";
-echo "Ghicește un cuvânt de 5 litere.\n";
+echo "🎉 Welcome to Wordle! 🎉\n";
+echo "Objective: Guess the secret 5-letter word.\n\n";
+echo "🔍 Here are the rules:\n";
+echo "- You have 6 attempts to find the correct word.\n";
+echo "- After each guess, you'll get visual clues:\n";
+echo "  🟩 Green: The letter is correct and in the right position!\n";
+echo "  🟨 Yellow: The letter is correct but in the wrong position.\n";
+echo "  ⬜ Gray: The letter is not in the secret word.\n\n";
+echo "Good luck, and have fun guessing! 🔠💡\n";
 
 $maxAttempts = 6;
 $attempts = 0;
 
 while ($attempts < $maxAttempts) {
-    // Citire guess de la utilizator
-    echo "Încercarea " . ($attempts + 1) . ": ";
+    // Read user guess
+    echo "Attempt " . ($attempts + 1) . ": ";
     $guess = trim(fgets(STDIN));
 
-    // Validare lungime
+    // Validate length
     if (strlen($guess) !== 5) {
-        echo "Cuvântul trebuie să aibă 5 litere!\n";
+        echo "The word must be 5 letters long!\n";
         continue;
     }
 
-    // Trimite guess-ul la server
+    // Send guess to server
     socket_write($s, $guess . "\n");
 
-    // Primește răspunsul de la server
+    // Receive response from server
     $response = socket_read($s, 1024);
     $result = json_decode($response, true);
 
-    // Afișează rezultatul
+    // Display the result
     foreach ($result['letters'] as $letterInfo) {
         $letter = $letterInfo['letter'];
         $status = $letterInfo['status'];
 
-        // Colorare bazată pe status
+        // Color based on status
         switch ($status) {
             case 'green':
-                echo "\033[42m $letter \033[0m"; // Fundal verde
+                echo "\033[42m $letter \033[0m"; // Green background
                 break;
             case 'yellow':
-                echo "\033[43m $letter \033[0m"; // Fundal galben
+                echo "\033[43m $letter \033[0m"; // Yellow background
                 break;
             case 'gray':
-                echo "\033[47m $letter \033[0m"; // Fundal gri
+                echo "\033[47m $letter \033[0m"; // Gray background
                 break;
         }
     }
@@ -53,9 +60,9 @@ while ($attempts < $maxAttempts) {
 
     $attempts++;
 
-    // Verifică condiții de final
+    // Check end conditions
     if (isset($result['won']) && $result['won'] === true) {
-        echo "Felicitări! Ai ghicit cuvântul!\n";
+        echo "Congratulations! You've guessed the word!\n";
         break;
     }
 
@@ -65,6 +72,6 @@ while ($attempts < $maxAttempts) {
     }
 }
 
-// Închide socket-ul
+// Close the socket
 socket_close($s);
 ?>
