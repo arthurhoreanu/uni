@@ -1,7 +1,7 @@
 <?php
 
 $s = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-$c = socket_connect($s, "localhost", 12345);
+$c = socket_connect($s, "10.94.126.96", 12345);
 
 if ($c === false) {
     die("Connection error: " . socket_strerror(socket_last_error()));
