@@ -1,0 +1,11 @@
+id&studentName&house&authority&points
+1&Hermione Granger&Gryffindor&Minerva McGonagall&15
+2&Draco Malfoy&Slytherin&Severus Snape&30
+3&Luna Lovegood&Ravenclaw&Minerva McGonagall&20
+4&Cedric Diggory&Hufflepuff&Albus Dumbledore&20
+5&Harry Potter&Gryffindor&Dolores Umbridge&-15
+6&Michael Corner&Ravenclaw&Horace Slughorn&10
+7&Ernie Macmillan&Hufflepuff&Minerva McGonagall&35
+8&Ron Weasley&Gryffindor&Remus Lupin&10
+9&Vincent Crabbe&Slytherin&Severus Snape&-5
+10&Hermione Granger&Gryffindor&Minerva McGonagall&30

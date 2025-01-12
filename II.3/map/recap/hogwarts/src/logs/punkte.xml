@@ -1,0 +1,72 @@
+<logs>
+    <log>
+        <id>1</id>
+        <studentName>Hermione Granger</studentName>
+        <house>Gryffindor</house>
+        <authority>Minerva McGonagall</authority>
+        <points>15</points>
+    </log>
+    <log>
+        <id>2</id>
+        <studentName>Draco Malfoy</studentName>
+        <house>Slytherin</house>
+        <authority>Severus Snape</authority>
+        <points>30</points>
+    </log>
+    <log>
+        <id>3</id>
+        <studentName>Luna Lovegood</studentName>
+        <house>Ravenclaw</house>
+        <authority>Minerva McGonagall</authority>
+        <points>20</points>
+    </log>
+    <log>
+        <id>4</id>
+        <studentName>Cedric Diggory</studentName>
+        <house>Hufflepuff</house>
+        <authority>Albus Dumbledore</authority>
+        <points>20</points>
+    </log>
+    <log>
+        <id>5</id>
+        <studentName>Harry Potter</studentName>
+        <house>Gryffindor</house>
+        <authority>Dolores Umbridge</authority>
+        <points>-15</points>
+    </log>
+    <log>
+        <id>6</id>
+        <studentName>Michael Corner</studentName>
+        <house>Ravenclaw</house>
+        <authority>Horace Slughorn</authority>
+        <points>10</points>
+    </log>
+    <log>
+        <id>7</id>
+        <studentName>Ernie Macmillan</studentName>
+        <house>Hufflepuff</house>
+        <authority>Minerva McGonagall</authority>
+        <points>35</points>
+    </log>
+    <log>
+        <id>8</id>
+        <studentName>Ron Weasley</studentName>
+        <house>Gryffindor</house>
+        <authority>Remus Lupin</authority>
+        <points>10</points>
+    </log>
+    <log>
+        <id>9</id>
+        <studentName>Vincent Crabbe</studentName>
+        <house>Slytherin</house>
+        <authority>Severus Snape</authority>
+        <points>-5</points>
+    </log>
+    <log>
+        <id>10</id>
+        <studentName>Hermione Granger</studentName>
+        <house>Gryffindor</house>
+        <authority>Minerva McGonagall</authority>
+        <points>30</points>
+    </log>
+</logs>
