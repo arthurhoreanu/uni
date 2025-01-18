@@ -1,0 +1,15 @@
+id#name#group#task#difficulty#points#success
+1#Iron Man#Power#Retrieve Power Stone#hard#30#win
+2#Captain America#Power#Defeat Ronan#medium#15#win
+3#Thor#Power#Retrieve Orb on Morag#easy#5#fail
+4#Black Widow#Space#Retrieve Tesseract#hard#30#win
+5#Hawkeye#Space#Infiltrate Sakaar#medium#15#win
+6#Hulk#Space#Fight the Grandmaster's Champion#hard#30#fail
+7#Scarlet Witch#Reality#Rescue Vision#hard#30#win
+8#Vision#Reality#Keep the Stone safe from
+Thanos#medium#15#fail
+9#Doctor Strange#Time#Battle Dormammu#hard#30#win
+10#Spider-Man#Time#Stop Vulture's Robbery#medium#15#win
+11#Ant-Man#Mind#Retrieve Mind Stone from Hydra#hard#30#fail
+12#Wasp#Mind#Stop Yellowjacket#medium#15#win
+13#Black Panther#Soul#Retrieve Soul Stone#hard#30#win

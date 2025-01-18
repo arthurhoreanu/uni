@@ -1,6 +1,9 @@
 import controller.HogwartsController;
-import model.*;
+import model.Log;
+import model.LogParser;
+import model.LogParserFactory;
 import view.ConsoleView;
+
 import java.util.List;
 
 public class Main {
@@ -10,18 +13,9 @@ public class Main {
             List<Log> logEntries = parser.parse("src/logs/punkte.txt");
 
             HogwartsController controller = new HogwartsController(logEntries);
-            ConsoleView view = new ConsoleView();
 
-            System.out.println("All the students whose names start with H:");
-            view.printStudents(controller.getStudentsByLetter('H'));
-
-            System.out.println("");
-            System.out.println("All the Gryffindor students:");
-            view.printStudents(controller.getGryffindorStudents());
-
-            System.out.println("");
-            System.out.println("House results:");
-            view.printHouseResults(controller);
+            ConsoleView view = new ConsoleView(controller);
+            view.menu();
         } catch (Exception e) {
             e.printStackTrace();
         }

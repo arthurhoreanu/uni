@@ -1,0 +1,12 @@
+Iron Man&30
+Scarlet Witch&30
+Black Panther&30
+Doctor Strange&30
+Black Widow&30
+Spider-Man&15
+Captain America&15
+Hawkeye&15
+Wasp&15
+Thor&-5
+Hulk&-30
+Ant-Man&-30

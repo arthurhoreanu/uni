@@ -5,14 +5,24 @@ package model;
  */
 public class Product {
 
+    private int productID;
     private String name;
     private double price;
     private String season;
 
-    public Product(String name, double price, String season) {
+    public Product(int productID, String name, double price, String season) {
+        this.productID = productID;
         this.name = name;
         this.price = price;
         this.season = season;
+    }
+
+    public int getProductID() {
+        return productID;
+    }
+
+    public void setProductID(int productID) {
+        this.productID = productID;
     }
 
     public String getName() {
@@ -42,7 +52,8 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "name='" + name + '\'' +
+                "productID=" + productID +
+                ", name='" + name + '\'' +
                 ", price=" + price +
                 ", season='" + season + '\'' +
                 '}';

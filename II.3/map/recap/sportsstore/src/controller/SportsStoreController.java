@@ -90,10 +90,15 @@ public class SportsStoreController {
      * @return
      */
     public List<Customer> filterCustomersByProductsSeason(String season) {
-        return customers.stream()
-                .filter(customer -> customer.getProducts().stream()
-                        .anyMatch(product -> product.getSeason().equalsIgnoreCase(season)))
-                .collect(Collectors.toList());
+        List<Customer> filtered = new ArrayList<>();
+        for (Customer customer : customers) {
+            for(Product product : customer.getProducts()) {
+                if (product.getSeason().equalsIgnoreCase(season)) {
+                    filtered.add(customer);
+                }
+            }
+        }
+        return filtered;
     }
 
     /**
@@ -103,18 +108,12 @@ public class SportsStoreController {
      * @return
      */
     public List<Product> sortProductsByCustomer(Customer customer, boolean ascending) {
-        if (customer.getProducts() == null) {
-            return new ArrayList<>();
-        }
-
-        Comparator<Product> comparator = Comparator.comparing(Product::getPrice);
-        if (!ascending) {
-            comparator = comparator.reversed();
-        }
-
-        return customer.getProducts().stream()
-                .sorted(comparator)
-                .collect(Collectors.toList());
+       List<Product> filtered = new ArrayList<>(customer.getProducts());
+       if (!ascending) {
+           filtered.sort(Comparator.comparing(Product::getPrice).reversed());
+       } else {
+           filtered.sort(Comparator.comparing(Product::getPrice));
+       }
     }
 
     /**

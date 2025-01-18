@@ -68,7 +68,6 @@ public class SportsStoreView {
         scanner.nextLine(); // Consume newline
         System.out.print("Season: ");
         String season = scanner.nextLine();
-
         controller.addProduct(new Product(name, price, season));
         System.out.println("Product added successfully!");
     }
@@ -83,7 +82,6 @@ public class SportsStoreView {
         scanner.nextLine(); // Consume newline
         System.out.print("New Season: ");
         String newSeason = scanner.nextLine();
-
         controller.updateProduct(productName, newName, newPrice, newSeason);
     }
 
@@ -106,7 +104,6 @@ public class SportsStoreView {
         String name = scanner.nextLine();
         System.out.print("Customer Place: ");
         String place = scanner.nextLine();
-
         controller.addCustomer(new Customer(id, name, place));
         System.out.println("Customer added successfully!");
     }
@@ -122,7 +119,6 @@ public class SportsStoreView {
         String newName = scanner.nextLine();
         System.out.print("New Place: ");
         String newPlace = scanner.nextLine();
-
         controller.updateCustomer(customerId, newId, newName, newPlace);
     }
 
@@ -158,15 +154,12 @@ public class SportsStoreView {
         System.out.print("Sort ascending? (true/false): ");
         boolean ascending = scanner.nextBoolean();
 
-        Customer customer = controller.getCustomers().stream()
-                .filter(c -> c.getId() == customerId)
-                .findFirst()
-                .orElse(null);
-
-        if (customer != null) {
-            controller.sortProductsByCustomer(customer, ascending).forEach(System.out::println);
-        } else {
+        for (Customer customer : controller.getCustomers()) {
+            if (customer.getId() == customerId) {
+                controller.sortProductsByCustomer(customer, ascending).forEach(System.out::println);
+            } else {
             System.out.println("Customer not found!");
+        }
         }
     }
 
