@@ -22,6 +22,7 @@ public class View {
             System.out.println("Press:");
             System.out.println("1. Filter character by letter");
             System.out.println("2. Sort Stark events by date");
+            System.out.println("3. House results");
             String input = scanner.nextLine();
 
             switch (input) {
@@ -30,6 +31,9 @@ public class View {
                     break;
                 case "2":
                     sortStarkEvents();
+                    break;
+                case "3":
+                    printHouseResults();
                     break;
                 default:
                     System.out.println("Invalid option. Please try again.");
@@ -52,5 +56,9 @@ public class View {
      */
     private void sortStarkEvents() {
         controller.sortStarkEvents().forEach(System.out::println);
+    }
+
+    private void printHouseResults() {
+        controller.getHouseResults("src/ergebnis.txt");
     }
 }
