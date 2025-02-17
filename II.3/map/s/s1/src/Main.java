@@ -21,7 +21,6 @@ public class Main {
 
         System.out.println("4. isPerfekt(6): "+ operation.isPerfect(6));
 
-
         Temperature temperature = new Temperature(new int[] { 12, 14, 9, 12, 15, 16, 15, 15, 11, 8, 13, 13, 15, 12 });
 
         System.out.println("5.1 average: " + temperature.average());

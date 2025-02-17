@@ -19,6 +19,11 @@ public class Controller {
      * @param product
      */
     public void addProduct(Product product) {
+        for (Product productFromList : productList) {
+            if(productFromList.getId() == product.getId()) {
+                throw new IllegalArgumentException("Product already exists");
+            }
+        }
         productList.add(product);
     }
 
@@ -62,6 +67,11 @@ public class Controller {
      * @param character
      */
     public void addCharacter(model.Character character) {
+        for( Character characterFromList : characterList) {
+            if(characterFromList.getId() == character.getId()) {
+                throw new IllegalArgumentException("Character already exists");
+            }
+        }
         characterList.add(character);
     }
 
