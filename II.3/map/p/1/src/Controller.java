@@ -54,7 +54,22 @@ public class Controller {
 
         // 2. Sort the houses by their scores in descending order
         List<Map.Entry<House, Integer>> sortedHouseScores = new ArrayList<>(houseScores.entrySet());
-        sortedHouseScores.sort((e1, e2) -> e2.getValue().compareTo(e1.getValue())); // Descending order
+        sortedHouseScores.sort((e1, e2) -> {
+            int scoreComparison = e2.getValue().compareTo(e1.getValue()); // Sort by score (descending)
+            if (scoreComparison == 0) {
+                return e1.getKey().compareTo(e2.getKey()); // Sort by enum order for ties
+            }
+            return scoreComparison;
+        });
+
+        // Dacă nu ar fi fost enum:
+//        sortedHouseScores.sort((e1, e2) -> {
+//            int scoreComparison = e2.getValue().compareTo(e1.getValue()); // Descending order of scores
+//            if (scoreComparison == 0) {
+//                return e1.getKey().getName().compareTo(e2.getKey().getName()); // Alphabetical order for ties
+//            }
+//            return scoreComparison;
+//        });
 
         // 3. Write the sorted results to the file
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
