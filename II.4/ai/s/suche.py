@@ -98,15 +98,11 @@ def astar(map: Map, start, goal):
                 came_from[neighbor] = current
     return None
 
-
 def plot_map(m, path=None):
     plt.imshow(m, cmap="inferno", origin="upper")
     if path:
-        x_coords, y_coords = zip(*path)
-        plt.plot(y_coords, x_coords, color="deepskyblue", linewidth=2)
-    plt.xticks(range(m.shape[1]))
-    plt.yticks(range(m.shape[0]))
-    plt.grid(True, color="black", linewidth=0.5)
+        x, y = zip(*path)  # Extrage coordonatele
+        plt.plot(y, x, color="deepskyblue", linewidth=2)
     plt.show()
 
 m = np.array(
