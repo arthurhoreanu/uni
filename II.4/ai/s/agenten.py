@@ -52,83 +52,82 @@ def TraceAgent(agent):
     agent.program = new_program
     return agent
 
-
 def ReflexVacuumAgent():
-    """A reflex agent that operates in an NxM grid."""
-
+    """A reflex agent for the two-state vacuum environment. [Figure 2.8]"""
     def program(percept):
         location, status = percept
         if status == 'Dirty':
             return 'Suck'
-        x, y = location
-        moves = []
-        if x > 0:
-            moves.append('Left')
-        if x < GRID_WIDTH - 1:
-            moves.append('Right')
-        if y > 0:
-            moves.append('Down')
-        if y < GRID_HEIGHT - 1:
-            moves.append('Up')
-        return random.choice(moves)
+        elif location == loc_A:
+            return 'Right'
+        elif location == loc_B:
+            return 'Left'
     return Agent(program)
 
 # def ReflexVacuumAgent():
-#     """A reflex agent for the two-state vacuum environment. [Figure 2.8]"""
+#     """A reflex agent that operates in an NxM grid."""
+#
 #     def program(percept):
 #         location, status = percept
 #         if status == 'Dirty':
 #             return 'Suck'
-#         elif location == loc_A:
-#             return 'Right'
-#         elif location == loc_B:
-#             return 'Left'
+#         x, y = location
+#         moves = []
+#         if x > 0:
+#             moves.append('Left')
+#         if x < GRID_WIDTH - 1:
+#             moves.append('Right')
+#         if y > 0:
+#             moves.append('Down')
+#         if y < GRID_HEIGHT - 1:
+#             moves.append('Up')
+#         return random.choice(moves)
 #     return Agent(program)
 
 def ModelBasedVacuumAgent():
-    """An agent that keeps track of a grid environment."""
-    model = {}
+    """An agent that keeps track of what locations are clean or dirty."""
+    model = {loc_A: None, loc_B: None}
+
     def program(percept):
+        """Same as ReflexVacuumAgent, except if everything is clean, do NoOp."""
         location, status = percept
         model[location] = status
-
-        if all(state == 'Clean' for state in model.values()):
+        if model[loc_A] == model[loc_B] == 'Clean':
             return 'NoOp'
-
-        if status == 'Dirty':
+        elif status == 'Dirty':
             return 'Suck'
-
-        x, y = location
-        moves = [('Right', (x + 1, y)), ('Left', (x - 1, y)), ('Up', (x, y + 1)), ('Down', (x, y - 1))]
-
-        valid_moves = []
-
-        for move, loc in moves:
-            if loc not in model:
-                valid_moves.append(move)
-            elif model[loc] == 'Dirty':
-                valid_moves.append(move)
-
-        return random.choice(valid_moves) if valid_moves else 'NoOp'
-
+        elif location == loc_A:
+            return 'Right'
+        elif location == loc_B:
+            return 'Left'
     return Agent(program)
 
 # def ModelBasedVacuumAgent():
-#     """An agent that keeps track of what locations are clean or dirty."""
-#     model = {loc_A: None, loc_B: None}
-#
+#     """An agent that keeps track of a grid environment."""
+#     model = {}
 #     def program(percept):
-#         """Same as ReflexVacuumAgent, except if everything is clean, do NoOp."""
 #         location, status = percept
 #         model[location] = status
-#         if model[loc_A] == model[loc_B] == 'Clean':
+#
+#         if all(state == 'Clean' for state in model.values()):
 #             return 'NoOp'
-#         elif status == 'Dirty':
+#
+#         if status == 'Dirty':
 #             return 'Suck'
-#         elif location == loc_A:
-#             return 'Right'
-#         elif location == loc_B:
-#             return 'Left'
+#
+#         x, y = location
+#         moves = [('Right', (x + 1, y)), ('Left', (x - 1, y)), ('Up', (x, y + 1)), ('Down', (x, y - 1))]
+#
+#         valid_moves = []
+#
+#         for move, loc in moves:
+#             if loc not in model:
+#                 valid_moves.append(move)
+#             elif model[loc] == 'Dirty':
+#                 valid_moves.append(move)
+#
+#         return random.choice(valid_moves) if valid_moves else 'NoOp'
+#
 #     return Agent(program)
 
 class Environment:
@@ -231,10 +230,6 @@ class TrivialVacuumEnvironment(Environment):
         self.status = {loc_A: random.choice(['Clean', 'Dirty']),
                        loc_B: random.choice(['Clean', 'Dirty'])}
 
-    def thing_classes(self):
-        return [Wall, Dirt, ReflexVacuumAgent, RandomVacuumAgent,
-                TableDrivenVacuumAgent, ModelBasedVacuumAgent]
-
     def percept(self, agent):
         """Returns the agent's location, and the location status (Dirty/Clean)."""
         return (agent.location, self.status[agent.location])
@@ -303,7 +298,7 @@ a.program((loc_A, 'Dirty'))
 a.program((loc_A, 'Dirty'))
 
 grid_env = GridVacuumEnvironment(width=GRID_WIDTH, height=GRID_HEIGHT)
-grid_agent = TraceAgent(ModelBasedVacuumAgent())  # Poți schimba cu ReflexVacuumAgent()
+grid_agent = TraceAgent(ModelBasedVacuumAgent())
 grid_env.add_thing(grid_agent, grid_env.default_location(grid_agent))
 grid_env.run(10)
 
