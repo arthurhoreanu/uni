@@ -101,7 +101,7 @@ def astar(map: Map, start, goal):
 def plot_map(m, path=None):
     plt.imshow(m, cmap="inferno", origin="upper")
     if path:
-        x, y = zip(*path)  # Extrage coordonatele
+        x, y = zip(*path)
         plt.plot(y, x, color="deepskyblue", linewidth=2)
     plt.show()
 
