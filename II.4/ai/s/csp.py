@@ -46,7 +46,6 @@ class CSP():
 			solved = solved and (a is not None)
 		return (solved and self.isConsistent())
 
-
 #backtracking search algorithm
 def backtrackcsp(csp, depth=0):
     if csp.isSolved():
