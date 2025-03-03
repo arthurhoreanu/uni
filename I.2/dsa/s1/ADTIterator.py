@@ -1,5 +1,3 @@
-from ADTBag import ADTBag
-
 class ADTIterator:
 
     def __init__(self, Bag):
@@ -10,25 +8,25 @@ class ADTIterator:
             self.i = 0
 
     def valid(self):
-        if self.i >= 0 and self.i < self.Bag.length():
+        if 0 <= self.i < self.Bag.length():
             return True
         else:
             return False
 
     def next(self):
-        self.i += 1
         if self.valid():
-            pass
+            self.i += 1
         else:
-            self.i -= 1
+            raise StopIteration("Iterator has reached the end")
 
     def first(self):
         if self.Bag.length() == 0:
-            return False
+            raise IndexError("Bag is empty, no first element")
         else:
             self.i = 0
-            return True
 
     def getCurrent(self):
-        if self.valid() == True:
-            return self.Bag.list[self.i]
+        if self.valid():
+            return self.Bag.elements[self.i]
+        else:
+            raise IndexError("Iterator out of bounds")

@@ -1,30 +1,26 @@
 class ADTBag:
 
     def __init__(self):
-        self.list = []
+        self.elements = []
 
     def add(self, elem):
-        self.list.append(elem)
+        self.elements.append(elem)
 
     def remove(self, elem):
-        if elem in self.list:
-            self.list.remove(elem)
+        if elem in self.elements:
+            self.elements.remove(elem)
             return True
         else:
-            return False
+            raise ValueError(f"Element {elem} not found in the bag")
 
     def length(self):
-        return len(self.list)
+        return len(self.elements)
 
     def search(self, elem):
-        if elem in self.list:
+        if elem in self.elements:
             return True
         else:
             return False
 
     def nrOccurence(self, elem):
-        nr = 0
-        for i in range(len(self.list)):
-            if self.list[i] == elem:
-                nr += 1
-        return nr
+        return self.elements.count(elem)
